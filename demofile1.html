@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title>ASBLSROVRT</title>
+<body>
+<body id="body">
+<h1><center>CLICK INSIDE WEBSITE TO START</center></h1>
+<p id="log">yOu HaVe BeEn KeYlOgGeD, hEhE</p>
+<p>This is the website for people who want to see fancy underwater robots!</p>
+<center><iframe id="myDiv" src="http://localhost:9000/stream" height="495" width="650"></iframe></center>
+<script>
+const input = document.querySelector('input');
+
+document.addEventListener('keydown', logKey);
+document.addEventListener('keyup', logKey2);
+
+function logKey(e) {
+  input.textContent += ` ${e.code}`;
+if(e.code = "Space")
+{
+  document.getElementById("body").style.color = "#0000ff";
+}
+
+}
+function logKey2(e) {
+  if(e.code = "KeyR")
+  {
+     document.getElementById("myDiv").style.transform = "rotate(180deg)";
+  }
+if(e.code = "Space")
+{
+  document.getElementById("body").style.color = "#ffffff";                  
+}
+}
+</script>
+<p>Above is a live feed of our SROV (submersible remotely operated vehicle) camera.</p> 
+</body>
+</html>
